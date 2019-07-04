@@ -8,5 +8,6 @@ namespace Repository
 {
     public class AlunoRepositorio
     {
+        Conexao conexao = new Conexao();
     }
 }

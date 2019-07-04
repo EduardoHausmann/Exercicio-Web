@@ -9,7 +9,7 @@ namespace Repository
 {
     public class Conexao
     {
-        public SqlCommand Conecta()
+        public SqlCommand Conectar()
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Exercicio.mdf;Integrated Security=True;Connect Timeout=30";
