@@ -9,9 +9,42 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/Content/CadastroEscola.css" />
 </head>
 <body>
-    <div> 
+    <div>
+        <a href="/escola/cadastro" id="botao-cadastro">Cadastro Escola</a>
     </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < ViewBag.Escolas.Count; i++)
+            {
+                <tr>
+                    <td>@ViewBag.Escolass[i].Id</td>
+                    <td>@ViewBag.Escolas[i].Nome</td>
+                    <td>
+                        <a href="/estoque/editar?id=@ViewBag.Escolas[i].Id">Editar</a>
+                        <a href="/estoque/apagar?id=@ViewBag.Escolas[i].Id">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Ação</th>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>

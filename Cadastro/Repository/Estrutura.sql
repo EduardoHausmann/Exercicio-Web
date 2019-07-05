@@ -9,7 +9,7 @@ CREATE TABLE alunos(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(100),
 	cpf VARCHAR(20),
-	nota_1 DECIMAL(4,2),
-	nota_2 DECIMAL(4,2),
-	nota_3 DECIMAL(4,2)
+	nota_1 DECIMAL(5,2),
+	nota_2 DECIMAL(5,2),
+	nota_3 DECIMAL(5,2)
 );

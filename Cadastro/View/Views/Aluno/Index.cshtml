@@ -9,9 +9,56 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/Content/CadastroAluno.css"/>
 </head>
 <body>
-    <div> 
+    <div>
+        <a href="/aluno/cadastro" id="botao-cadastro">Cadastro Aluno</a>
     </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+            {
+                <tr>
+                    <td>@ViewBag.Alunos[i].Id</td>
+                    <td>@ViewBag.Alunos[i].Nome</td>
+                    <td>@ViewBag.Alunos[i].Cpf</td>
+                    <td>@ViewBag.Alunos[i].Nota1</td>
+                    <td>@ViewBag.Alunos[i].Nota2</td>
+                    <td>@ViewBag.Alunos[i].Nota3</td>
+                    <td>
+                        <a href="/estoque/editar?id=@ViewBag.Alunos[i].Id">Editar</a>
+                        <a href="/estoque/apagar?id=@ViewBag.Alunos[i].Id">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Ação</th>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>

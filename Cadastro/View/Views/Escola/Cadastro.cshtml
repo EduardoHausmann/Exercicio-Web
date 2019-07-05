@@ -9,9 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro</title>
+    <link rel="stylesheet" href="~/Content/CadastroAluno.css" />
 </head>
-<body>
-    <div> 
+<body>    
+    <div class="div-titulo">
+        <a href="/escola" id="lista-escola" class="titulo">Lista de Escolas</a>
     </div>
+    <form action="/escola/store" method="post">
+        <div class="div-campo">
+            <label for="campo-nome">Nome</label>
+            <input type="text" name="nome" id="campo-nome" class="campo" />
+        </div>
+        <button type="submit" class="botao">Salvar</button>
+    </form>
+
 </body>
 </html>
