@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model;
+using Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +10,18 @@ namespace View.Controllers
 {
     public class AlunoController : Controller
     {
-        // GET: Aluno
+        AlunoRepositorio repositorio = new AlunoRepositorio();
+        
         public ActionResult Index()
+        {
+            List<Aluno> alunos = repositorio.ObterTodos("");
+
+            ViewBag.Alunos = alunos;
+
+            return View();
+        }
+
+        public ActionResult Cadastro()
         {
             return View();
         }

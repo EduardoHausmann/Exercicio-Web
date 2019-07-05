@@ -66,6 +66,7 @@ namespace Repository
             SqlCommand comando = conexao.Conectar();
             comando.CommandText = @"SELECT * FROM escolas WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
+
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
 
