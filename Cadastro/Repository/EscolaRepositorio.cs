@@ -21,13 +21,15 @@ namespace Repository
 
             int id = Convert.ToInt32(comando.ExecuteScalar());
 
+            comando.Connection.Close();
+
             return id;
         }
 
         public List<Escola> ObterTodos(string busca)
         {
             SqlCommand comando = conexao.Conectar();
-            comando.CommandText = @"SELECT * FROM escolas WHERE bnome LIKE @BUSCA";
+            comando.CommandText = @"SELECT * FROM escolas WHERE nome LIKE @BUSCA";
             busca = $"% {busca} %";
             comando.Parameters.AddWithValue("@BUSCA", busca);
 
