@@ -64,6 +64,30 @@ namespace Repository
             SqlCommand comando = conexao.Conectar();
             comando.CommandText = @"SELECT * FROM escolas WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+
+            if (tabela.Rows.Count == 1)
+            {
+                DataRow linha = tabela.Rows[0];
+                Escola escola = new Escola();
+                escola.Id = Convert.ToInt32(linha["id"]);
+                escola.Nome = linha["nome"].ToString();
+
+                return escola;
+            }
+            return null;
+        }
+
+        public bool Atualizar(Escola escola)
+        {
+            SqlCommand comando = conexao.Conectar();
+            comando.CommandText = @"UPDATE SET nome = @NOME WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", escola.Id);
+            comando.Parameters.AddWithValue("@NOME", escola.Nome);
+            int quantidadeAfetada = comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return quantidadeAfetada == 1;
         }
     }
 }
