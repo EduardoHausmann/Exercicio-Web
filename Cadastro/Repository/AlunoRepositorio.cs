@@ -34,7 +34,7 @@ namespace Repository
         {
             SqlCommand comando = conexao.Conectar();
             comando.CommandText = @"SELECT * FROM alunos WHERE nome LIKE @BUSCA";
-            busca = $"% {busca} %";
+            busca = $"%{busca}%";
             comando.Parameters.AddWithValue("@BUSCA", busca);
 
             List<Aluno> alunos = new List<Aluno>();

@@ -1,0 +1,41 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+table{
+    width: 95%;
+    margin-left: 2%;
+}
+
+th {
+    background-color: #19d1d1;
+}
+
+tr{
+    height: 30px;
+}
+
+tr, th{
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    border-color: #bbb4b4;
+}
+
+tr:hover{
+    background-color: #ddd;
+}
+
+#botao-cadastro {
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin-right: 2,79%;
+    margin-bottom: 10px;
+}
