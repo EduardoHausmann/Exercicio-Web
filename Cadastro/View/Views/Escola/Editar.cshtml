@@ -11,7 +11,15 @@
     <title>Editar</title>
 </head>
 <body>
-    <div> 
-    </div>
+    <form action="/escola/update" method="post">
+        <div>
+            <label for="campo-nome">Nome</label>
+            <input type="text" name="nome" id="campo-nome" value="@ViewBag.Escola.Nome" />
+        </div>
+        <input type="hidden" name="id" value="ViewBag.Escola.Id" />
+
+        <button type="submit">Salvar</button>
+    </form>
+
 </body>
 </html>
