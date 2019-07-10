@@ -9,3 +9,4 @@ T:\Documentos\GitHub\Exercicio-Web\Cadastro\Model\bin\Debug\Model.pdb
 T:\Documentos\GitHub\Exercicio-Web\Cadastro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 T:\Documentos\GitHub\Exercicio-Web\Cadastro\Model\obj\Debug\Model.dll
 T:\Documentos\GitHub\Exercicio-Web\Cadastro\Model\obj\Debug\Model.pdb
+T:\Documentos\GitHub\Exercicio-Web\Cadastro\Model\obj\Debug\Model.csprojAssemblyReference.cache

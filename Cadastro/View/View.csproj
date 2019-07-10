@@ -91,6 +91,7 @@
     <Content Include="Content\AlunoIndex.css" />
     <Content Include="Content\CadastroAluno.css" />
     <Content Include="Content\CadastroEscola.css" />
+    <Content Include="Content\EscolaIndex.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
